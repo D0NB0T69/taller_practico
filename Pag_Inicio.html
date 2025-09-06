@@ -10,10 +10,24 @@
     <h1>Historial de Tareas Diarias</h1>
   <div class="contenedor">
     <form id="formTarea">
-      <input type="date" id="fecha" required>
-      <textarea id="descripcion" placeholder="descripcion de tarea" required></textarea>
-      <button type="submit">Agregar Tarea</button>
-    </form>
+       <h2>:)) Nueva Tarea</h2>
+
+  <table class="form-tabla">
+    <tr>
+      <td><label for="fecha">Fecha:</label></td>
+      <td><input type="date" id="fecha" required></td>
+    </tr>
+    <tr>
+      <td><label for="descripcion">Descripción:</label></td>
+      <td><textarea id="descripcion" placeholder="Descripción de la tarea" required></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;">
+        <button type="submit"> + Agregar Tarea</button>
+      </td>
+    </tr>
+  </table>
+
 
   </div>
     <script src="js/local.js"></script>

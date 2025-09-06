@@ -8,18 +8,18 @@
 </head>
 <body>
     <h1>Historial de Tareas Diarias</h1>
-  <div class="contenedor">
-    <form id="formTarea">
-       <h2>Nueva Tarea</h2>
+      <div class="contenedor">
+        <form id="formTarea">
+    <h2>Nueva Tarea</h2>
 
-  <table class="form_tabla">
+    <table class="form_tabla">
     <tr>
       <td><label for="fecha">Fecha:</label></td>
       <td><input type="date" id="fecha" required></td>
     </tr>
     <tr>
       <td><label for="descripcion">Descripción:</label></td>
-      <td><textarea id="descripcion" placeholder="Descripción de la tarea" required></textarea></td>
+      <td><textarea id="descripcion" placeholder="descripcion" required></textarea></td>
     </tr>
     <tr>
       <td colspan="2">
@@ -30,9 +30,16 @@
   </form>
 
 <!-- Aquí aparece el mensaje -->
-<div id="mensaje" class="mensaje"></div>
-
-
+<div id="mensaje" class="mensaje">
+  </div>
+<div class="filtros">
+      <input type="text" id="buscar" placeholder="buscar">
+      <select id="filtro">
+        <option value="todas">Todas</option>
+        <option value="pendientes">Pendientes</option>
+        <option value="completadas">Completadas</option>
+      </select>
+   </div>
   </div>
     <script src="js/local.js"></script>
 </body>

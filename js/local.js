@@ -57,9 +57,26 @@ function mostrarTareas() {
   });
 }
 
+// Eliminar tarea
+function eliminarTarea(id) {
+  let tareas = obtenerTareas();
+  tareas = tareas.filter(t => t.id !== id);
+  guardarTareas(tareas);
+  mostrarTareas();
+}
 
+// Completar / desmarcar tarea
+function toggleCompletada(id) {
+  let tareas = obtenerTareas();
+  tareas = tareas.map(t => {
+    if (t.id === id) t.completada = !t.completada;
+    return t;
+  });
+  guardarTareas(tareas);
+  mostrarTareas();
+}
 
-// Eventos
+// Evento del formulario
 document.getElementById("formTarea").addEventListener("submit", e => {
   e.preventDefault();
   const fecha = document.getElementById("fecha").value;

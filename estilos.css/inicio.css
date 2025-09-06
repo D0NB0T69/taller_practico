@@ -1,0 +1,6 @@
+body{
+    background-image: url(img_estilos/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

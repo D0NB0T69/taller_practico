@@ -18,7 +18,7 @@
     </tr>
     <tr>
       <td><label for="descripcion">Descripción:</label></td>
-      <td><textarea id="descripcion" placeholder="Descripción de la tarea" required></textarea></td>
+      <td><textarea id="descripcion" placeholder="descripcion" required></textarea></td>
     </tr>
     <tr>
       <td colspan="2">
@@ -29,8 +29,16 @@
   </form>
 <!-- Aquí aparece el mensaje -->
 
-<div id="mensaje" class="mensaje"></div>
-
+<div id="mensaje" class="mensaje">
+  </div>
+<div class="filtros">
+      <input type="text" id="buscar" placeholder="buscar">
+      <select id="filtro">
+        <option value="todas">Todas</option>
+        <option value="pendientes">Pendientes</option>
+        <option value="completadas">Completadas</option>
+      </select>
+   </div>
   </div>
     <script src="js/local.js"></script>
 </body>

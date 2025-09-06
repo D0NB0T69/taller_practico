@@ -6,7 +6,7 @@ h1{
     font-size: 50px;
     border: 2px solid #020202; 
     padding: 10px;             
-    margin: 50px;       
+    margin: auto;       
     width: fit-content;        
     border-radius: 10px;    
     background-color: rgb(190, 172, 149);
@@ -14,8 +14,109 @@ h1{
     font-family:'Times New Roman', Times, serif
 }
 
-form{
+
+.h2{
+    margin: 10px;
+    text-align: center;
+}
+
+.form_tabla{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    border-collapse: collapse;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow:9px 4px 10px rgba(0,0,0,0.1);
+}
+
+.form_tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form_tabla td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.form_tabla label {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* --- Campos de entrada --- */
+.form_tabla input[type="date"],
+.form_tabla textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form_tabla input[type="date"]:focus,
+.form_tabla textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+/* --- Textarea --- */
+.form_tabla textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* --- Botón --- */
+.form_tabla button {
+  display: block;
+  width: 100%;
+  margin: 15px auto 0 auto;
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form_tabla button:hover {
+  background: #43a047;
+}
+
+/* --- Mensaje dinámico --- */
+.mensaje {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  display: none; /* Oculto por defecto */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Mensaje de éxito */
+.mensaje.exito {
+  display: block;
+  background: #e0ffe0;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+/* Mensaje de error */
+.mensaje.error {
+  display: block;
+  background: #ffe0e0;
+  color: #c62828;
+  border: 1px solid #c62828;
 }

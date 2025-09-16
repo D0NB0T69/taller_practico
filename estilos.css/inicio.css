@@ -120,3 +120,22 @@ h1{
   color: #c62828;
   border: 1px solid #c62828;
 }
+
+.perrito{
+    margin:auto;
+    position: fixed;
+    bottom: 100px;
+    right: 80%;
+    width: 90px;
+    border-radius: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}

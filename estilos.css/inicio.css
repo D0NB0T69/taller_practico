@@ -21,28 +21,28 @@ h1{
 }
 
 .form_tabla{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-width: 500px;
-    margin: 50px auto;
-    border-collapse: collapse;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    box-shadow:9px 4px 10px rgba(0,0,0,0.1);
-}
-
-.form_tabla {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
   border-collapse: collapse;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 9px 4px 10px rgba(0,0,0,0.1); 
+    
 }
 
-.form_tabla td {
+
+
+.form_tabla td:first-child {
   padding: 12px;
   vertical-align: middle;
+  font-weight: bold;
+  color: darkblue;
 }
 
 .form_tabla label {
@@ -50,7 +50,6 @@ h1{
   color: #000000;
 }
 
-/* --- Campos de entrada --- */
 .form_tabla input[type="date"],
 .form_tabla textarea {
   width: 100%;
@@ -68,13 +67,12 @@ h1{
   outline: none;
 }
 
-/* --- Textarea --- */
+
 .form_tabla textarea {
   resize: none;
   height: 80px;
 }
 
-/* --- Botón --- */
 .form_tabla button {
   display: block;
   width: 100%;
@@ -87,25 +85,26 @@ h1{
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
+
 
 .form_tabla button:hover {
   background: #43a047;
 }
 
-/* --- Mensaje dinámico --- */
+
 .mensaje {
   margin-top: 20px;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
-  display: none; /* Oculto por defecto */
   padding: 10px;
   border-radius: 8px;
+  display: none;
 }
 
-/* Mensaje de éxito */
+
 .mensaje.exito {
   display: block;
   background: #e0ffe0;
@@ -113,7 +112,7 @@ h1{
   border: 1px solid #2e7d32;
 }
 
-/* Mensaje de error */
+
 .mensaje.error {
   display: block;
   background: #ffe0e0;
@@ -122,11 +121,11 @@ h1{
 }
 
 .perrito{
-    margin:auto;
-    position: fixed;
-    bottom: 100px;
-    right: 80%;
-    width: 90px;
+    margin: 20px auto;
+    bottom: 30px;
+    left: 30px;
+    transform: translate(-50%, 0);
+    width: 100px;
     border-radius: 10px;
     animation: float 3s ease-in-out infinite;
 }
@@ -138,4 +137,26 @@ h1{
     50% {
         transform: translateY(-15px);
     }
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.filtros{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px; 
+}
+
+.form_tabla button::after {
+  content: " ➜";
+}
+
+h1::before {
+  content: "📌 ";
 }

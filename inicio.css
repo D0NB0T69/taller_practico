@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #cacaca);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1{
+    margin : 20px 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #3c3141;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#informacion{
+    background: rgba(49, 25, 25, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    text-align: lef;
+}
+
+#informacion h2{
+    margin-top: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#informacion span{
+    display: block;
+    margin : 5px 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#dificultad{
+    margin: 15px 0;
+    padding: 10px;
+    background: #2c2a2a;
+    text-align: center;
+}
+
+#nivel{
+    padding: 2px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+}
+
+#boton_reiniciar{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: rgba(220, 20, 60, 0.521);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#boton_reiniciar:hover{
+    background: rgba(231, 231, 231, 0.8);
+}
+
+#tablero{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 15px;
+    margin: 20px auto;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.carta_tablero div {
+  width: 100px;
+  height: 120px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.carta_tablero div:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+}
+
+.memoria{
+    width: 100px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2px;
+    position: absolute;
+    right: 20px;
+    top: 50px; 
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

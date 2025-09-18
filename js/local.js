@@ -142,6 +142,8 @@ function guardarMejores() {
     actualizarMejores();
 }
 function actualizarMejores() {
+    mejorTiempoSpan.textContent = "";
+    mejorIntentosSpan.textContent = "";
     let mejorTiempo = sessionStorage.getItem("mejorTiempo");
     let mejorIntentos = sessionStorage.getItem("mejorIntentos");
 

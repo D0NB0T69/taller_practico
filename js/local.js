@@ -60,7 +60,9 @@ function iniciarJuego() {
         tablero.appendChild(carta);
     }
 
-    iniciarCronometro(); //llama a la funcion 
+    iniciarCronometro(); //llama a la funcion para contabilizar el tiempo
+    actualizarMejores(); //llama a la funcion para actualizar puntajes
+
 }
         
 // función para seleccionar una carta
@@ -87,6 +89,11 @@ function seleccionarCarta(carta) {
         if (carta1.dataset.valor === carta2.dataset.valor) {
             cartasSeleccionadas = [];
             cartasEmparejadas += 2;
+
+            if (cartasEmparejadas === cartas.length) {
+                detenerCronometro();
+                guardarMejores(); 
+            }
                     
         } else {
             // Si las cartas no son iguales, volver a ocultarlas después de un segundo
@@ -101,6 +108,8 @@ function seleccionarCarta(carta) {
     }
 }
 
+
+// funcionalidad de tiempo
 function iniciarCronometro() {
     tiempo = 0;
     tiempoSpan.textContent = tiempo; // empieza en 0
@@ -109,12 +118,47 @@ function iniciarCronometro() {
         let minutos = Math.floor(tiempo / 60);// la fucnionalidad math.floor hace un redondeo hacia abajo 
         let segundos = tiempo % 60;
         tiempoSpan.textContent = (minutos > 0 ? minutos + "m " : "") + segundos + "s";
-    }, 1000);
+    }, 1000); // el mil indica que cada 1 segundo se vuelve y ejecuta este bloauqe de codigo.
 }
 
 function detenerCronometro() {
     clearInterval(temporizador);
 }
+
+//funcuionalidad de session storage
+function guardarMejores() {
+    // guardar mejor tiempo
+    let mejorTiempoGuardado = sessionStorage.getItem("mejorTiempo");
+    if (!mejorTiempoGuardado || tiempo < parseInt(mejorTiempoGuardado)) {
+        sessionStorage.setItem("mejorTiempo", tiempo);
+    }
+
+    // Guardar mejor intentos
+    let mejorIntentosGuardado = sessionStorage.getItem("mejorIntentos");
+    if (!mejorIntentosGuardado || intentos < parseInt(mejorIntentosGuardado)) {
+        sessionStorage.setItem("mejorIntentos", intentos);
+    }
+
+    actualizarMejores();
+}
+function actualizarMejores() {
+    let mejorTiempo = sessionStorage.getItem("mejorTiempo");
+    let mejorIntentos = sessionStorage.getItem("mejorIntentos");
+
+    if (mejorTiempo) {
+        let minutos = Math.floor(mejorTiempo / 60);
+        let segundos = mejorTiempo % 60;
+        mejorTiempoSpan.textContent = (minutos > 0 ? minutos + "m " : "") + segundos + "s";
+    }
+
+    if (mejorIntentos) {
+        mejorIntentosSpan.textContent = mejorIntentos;
+    }
+
+}
+
+
+
         
 botonReiniciar.onclick = iniciarJuego;
         

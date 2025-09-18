@@ -1,0 +1,152 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #807d7d 0%, #616872 100%);
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#estadisticas {
+    background-color: #d8c2a2;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#configuracion {
+    margin-bottom: 25px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select, button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #040101;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+button {
+    background-color: #7ca0b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2f3131;
+}
+
+#zona-juego {
+    margin: 25px 0;
+}
+
+#ahorcado {
+    font-family: monospace;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    white-space: pre;
+    margin: 20px 0;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#palabra-oculta {
+    font-size: 2.5rem;
+    letter-spacing: 15px;
+    margin: 30px 0;
+    font-weight: bold;
+    min-height: 60px;
+}
+
+#letras-usadas {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #d8c2a2;
+    border-radius: 10px;
+}
+
+#lista-letras {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+#teclado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 25px 0;
+}
+
+#teclado button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#teclado button:disabled {
+    background-color: #c20000;
+    color: #000000;
+    cursor: not-allowed;
+}
+
+#historial {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ced8e3;
+    border-radius: 5px;
+    text-align: left;
+}
+
+#lista-historial {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-historial li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mensaje-ganador {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.mensaje-perdedor {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+

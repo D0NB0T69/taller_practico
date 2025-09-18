@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Ahorcado</h1>
+            <div id="estadisticas">
+                <p>Victorias: <span id="victorias">0</span></p>
+                <p>Derrotas: <span id="derrotas">0</span></p>
+            </div>
+        </header>
+
+        <main>
+            <!-- categoría -->
+            <section id="configuracion">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                    <option value="animales">animales</option>
+                    <option value="frutas">frutas</option>
+                </select>
+                <button id="btn-nueva-partida">iniciar partida</button>
+            </section>
+
+            <!-- juego -->
+            <section id="juego">
+                <!-- Dibujo del ahorcado -->
+                <div id="ahorcado"></div>
+
+                <!-- Palabra oculta -->
+                <div id="palabra-oculta"></div>
+
+                <!-- Letras ya usadas -->
+                <div id="letras-usadas">
+                    <h3>Letras usadas:</h3>
+                    <p id="lista-letras"></p>
+                </div>
+
+                <!-- Teclado-->
+                <div id="teclado">
+                    <!-- JavaScript insertará aquí los botones de la A a la Z -->
+                </div>
+            </section>
+
+            <!-- Historial de partidas -->
+            <section id="historial">
+                <h2>Historial de Partidas</h2>
+                <button id="btn-ver-historial">Ver Historial</button>
+                <button id="btn-limpiar-historial">Limpiar Historial</button>
+                <ul id="lista-historial"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/inicio.js"></script>
+</body>
+</html>
